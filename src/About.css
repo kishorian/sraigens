@@ -1,0 +1,51 @@
+/* About.css */
+
+body {
+    margin: 0;
+      font-family: 'Nunito', sans-serif;  
+    background-color: #ffffff; /* Your original background color */
+    color: black; /* Ensure text is black */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  h1, h2, h3, h4 {
+    font-size: 2.5rem;
+    color: black; /* Ensure heading text is black */
+  }
+  
+  p, a, button, li {
+   
+    color: black; /* Ensure body text is black */
+  }
+  
+  .container {
+    background-color: transparent; /* Set container background to transparent */
+  }
+  
+  .img-rounded {
+    border-radius: 8px; /* Adding small curve to the edges */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .img-rounded:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .image-container {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .Aimage-heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  

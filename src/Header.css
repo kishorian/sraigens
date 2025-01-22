@@ -1,0 +1,105 @@
+/* Header styles */
+.custom-navbar {
+  background-color: #0f0f0f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 1rem 0;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+}
+
+.custom-navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.company-logo {
+  height: 100px; /* Updated from 50px to 100px */
+  width: 100px;
+  border-radius: 10%;
+  /* Optional: uncomment the next line to add margin if needed */
+  /* margin-right: 1rem; */
+}
+
+/* Navigation item styles */
+.custom-navbar .nav-item {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-right: 1rem;
+  transition: color 0.3s, background-color 0.3s;
+  list-style-type: none; /* Remove list dots */
+}
+
+/* Dropdown menu item styles */
+.nav-dropdown .dropdown-item {
+  color: #ffffff;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* Alignment of nav items */
+.custom-navbar .navbar-nav {
+  display: flex;
+  justify-content: space-evenly; /* Distribute nav items evenly */
+  flex-grow: 1; /* Allow navbar to grow and take up available space */
+  align-items: center;
+}
+
+/* Hover effects for nav items */
+#basic-navbar-nav .nav-item:hover {
+  color: grey;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+#blog-dropdown:hover {
+  color: grey;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+  .custom-navbar .navbar-nav {
+    justify-content: center; /* Center the items on medium screens */
+  }
+
+  .custom-navbar .nav-item {
+    margin-right: 1rem; /* Spacing between items */
+  }
+
+  /* Centered dropdown menu items */
+  .nav-dropdown .dropdown-item {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-navbar .nav-item,
+  .custom-navbar .nav-dropdown {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+  }
+
+  .company-logo {
+    height: 80px; /* Updated from 40px to 80px */
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-navbar .nav-item,
+  .custom-navbar .nav-dropdown {
+    font-size: 0.9rem;
+    margin-right: 0.25rem;
+  }
+
+  .company-logo {
+    height: 70px; /* Updated from 35px to 70px */
+  }
+}
+
+/* Ensuring consistent colors */
+#basic-navbar-nav .nav-item {
+  color: white;
+}
+
+#blog-dropdown {
+  color: white;
+}
