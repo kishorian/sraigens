@@ -1,28 +1,30 @@
-/* index.css */
-
+/* General Body Styles */
 body {
   margin: 0;
-    font-family: 'Nunito', sans-serif;
-  background-color: #0f0f0f;
+  font-family: 'Nunito', sans-serif;
+  background-color: #051622; /* Unified background color */
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Ensure proper visibility for content when the mobile menu is open */
+/* Ensure visibility when the mobile menu is open */
 html, body {
-  height: 100%; /* Make sure the body is full height */
+  height: 100%; /* Full height */
   overflow: auto; /* Allow scrolling if content overflows */
 }
 
-/* Heading styles */
+/* Heading Styles */
 h1, h2, h3, h4 {
-  
   color: white;
 }
 
 /* Body Text */
 p, a, button, li {
-  
   color: white;
+}
+
+/* Smooth Scrolling Animation */
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
 /* Image Styling */
@@ -31,23 +33,35 @@ img {
   height: auto;
 }
 
+/* Image Rounded Corners and Hover Effects */
 .img-rounded {
-  border-radius: 8px; /* Adding small curve to the edges */
+  border-radius: 8px; /* Small curve to the edges */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .img-rounded:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.03); /* Reduced hover scale */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle hover effect */
 }
 
-/* Image Container */
+/* Image Blending for Backgrounds */
+.img-blend {
+  width: 100%; 
+  height: auto; 
+  opacity: 0.9; /* Slight opacity to blend with background */
+  transition: transform 0.6s ease-out, box-shadow 0.6s ease-out;
+}
+.img-blend:hover {
+  transform: scale(1.03); /* Reduced hover scale */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle hover effect */
+}
+
+/* Image Container Styling */
 .image-container {
   position: relative;
   cursor: pointer;
 }
 
-/* Image Heading */
+/* Image Heading Styling */
 .image-heading {
   position: absolute;
   top: 50%;
@@ -59,16 +73,22 @@ img {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Specific Sections */
+/* Hero Section Heading */
 .hero-section .image-heading {
-  font-size: 2.5rem; /* Larger font size for the hero section */
+  font-size: 2.5rem; /* Larger font size */
 }
 
+/* Services Section Heading */
 .services .image-heading {
-  font-size: 1.25rem; /* Font size for service section */
+  font-size: 1.25rem;
   padding: 0.5rem;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 8px; /* Small curve for heading background */
+}
+
+/* About Us Section Heading */
+.about-us .image-heading {
+  font-size: 2.5rem;
 }
 
 /* Address Styles */
@@ -76,30 +96,29 @@ img {
   color: #007bff;
   margin-right: 0.5rem;
 }
-
 .contact-info p {
   font-size: 1rem;
   line-height: 1.5;
 }
+.contact-info {
+  text-align: center;
+}
 
 /* Footer Styling */
 footer {
-  background-color: #000000; /* Matching header color */
+  background-color: #051622; /* Unified background color */
   color: white; /* Text color */
   font-size: larger;
   padding: 1rem 0;
+  text-align: center;
 }
-
-footer a,
-footer i {
+footer a, footer i {
   color: #05fa3e; /* Accent color for links and icons */
   font-size: larger;
 }
-
 footer p {
   margin: 0;
   color: #ffffff;
- 
 }
 
 /* Accent Color for Buttons */
@@ -108,64 +127,55 @@ footer p {
   border: none;
   color: white;
 }
-
 .btn-secondary {
   background-color: #6c757d;
   border: none;
   color: white;
 }
 
-img:hover,
-img:focus {
-  transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+/* Media Queries */
 
-/* Prevent content from being hidden by mobile menu */
+/* Adding full media queries for responsiveness */
 @media (max-width: 991px) {
   body {
     overflow-y: scroll; /* Ensure the body scrolls vertically */
   }
-
   .custom-navbar .nav-menu.active {
-    max-height: 70vh; /* Limit mobile menu height to prevent full screen covering */
+    max-height: 70vh; /* Limit mobile menu height */
     overflow-y: auto; /* Make mobile menu scrollable */
   }
-
   footer {
-    padding: 1rem; /* Adjust footer padding for better visibility on mobile */
+    padding: 1rem; /* Adjust footer padding */
   }
 }
 
 /* Mobile View Styles */
 @media (max-width: 600px) {
   .container {
-    padding: 10px;
+    padding: 1rem; /* Adjust padding for better visibility */
   }
-
   footer {
-    text-align: center; /* Center the footer content on mobile */
+    text-align: center; /* Center footer content */
   }
-
   .footer-icons {
     display: block;
     text-align: center;
   }
-
   .footer-icons a {
-    margin: 0.5rem;
+    margin: 0.5rem; /* Adjust margin for better spacing */
   }
 }
 
+/* Tablet View Styles (e.g., iPad) */
 @media (min-width: 601px) and (max-width: 1024px) {
   .container {
-    padding: 20px;
+    padding: 2rem; /* Adjust padding */
   }
 }
 
+/* Desktop View Styles */
 @media (min-width: 1025px) {
   .container {
-    padding: 30px;
+    padding: 3rem; /* Larger padding for desktop */
   }
 }
