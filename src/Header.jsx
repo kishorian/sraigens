@@ -1,35 +1,45 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './Header.css'; // Import custom styles
 
+const scrollVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.9, ease: 'easeOut' }},
+};
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate(); // Hook to navigate programmatically
+  const navigate = useNavigate();
 
-  // Toggle menu visibility
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
-  // Close the menu when a link is clicked and navigate to the respective page
   const handleLinkClick = (path) => {
-    setIsMenuOpen(false); // Close the menu
-    navigate(path); // Navigate to the clicked page
+    setIsMenuOpen(false);
+    navigate(path);
   };
 
-  // Close the menu when a dropdown item is clicked
   const handleDropdownItemClick = (path) => {
-    setIsMenuOpen(false); // Close the menu
-    navigate(path); // Navigate to the clicked page
+    setIsMenuOpen(false);
+    navigate(path);
   };
 
   return (
     <Navbar expand="lg" className="custom-navbar" expanded={isMenuOpen}>
       <Container>
         <Navbar.Brand as={Link} to="/">
-          <img src="sraigen.png" alt="Company Logo" className="company-logo" />
+          <motion.img 
+            src="sraigen.png" 
+            alt="Company Logo" 
+            className="company-logo"
+            initial="hidden"
+            animate="visible"
+            viewport={{multiple : true}}
+            variants={scrollVariants}
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleMenu} />
         <Navbar.Collapse id="basic-navbar-nav">

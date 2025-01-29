@@ -13,6 +13,7 @@ const imageVariants = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: 'easeInOut' }},
 };
 
+
 const Home = () => {
   const navigate = useNavigate();
 
@@ -34,7 +35,7 @@ const Home = () => {
           whileInView="visible"
           viewport={{ multiple: true }}
         >
-          <img src="/image1.png" alt="Hero" className="img-fluid img-blend" />
+          <img src="/image1.jpg" alt="Hero" className="img-fluid img-blend" />
           <h1 className="image-heading">Empowering Businesses with AI and Innovation</h1>
         </motion.div>
         <motion.button
@@ -69,7 +70,7 @@ const Home = () => {
           whileInView="visible"
           viewport={{ multiple: true }}
         >
-          <img src="/image2.png" alt="About Us" className="img-fluid img-blend" />
+          <img src="/image2.jpg" alt="About Us" className="img-fluid img-blend" />
           <h1 className="image-heading">About Us</h1>
         </motion.div>
         <p className="about-description">
@@ -95,7 +96,7 @@ const Home = () => {
             viewport={{ multiple: true }}
           >
             <div className="image-container">
-              <img src="/image3.png" alt="AI Solutions" className="img-fluid img-blend" />
+              <img src="/image3.jpg" alt="AI Solutions" className="img-fluid img-blend" />
               <h3 className="image-heading">AI Solutions</h3>
             </div>
             <p>AI-powered products and personalized learning tools.</p>
@@ -110,7 +111,7 @@ const Home = () => {
             viewport={{ multiple: true }}
           >
             <div className="image-container">
-              <img src="/image4.png" alt="AI Automation" className="img-fluid img-blend" />
+              <img src="/image4.jpg" alt="AI Automation" className="img-fluid img-blend" />
               <h3 className="image-heading">AI Automation</h3>
             </div>
             <p>Automating complex workflows to ease manual work.</p>
@@ -125,7 +126,7 @@ const Home = () => {
             viewport={{ multiple: true }}
           >
             <div className="image-container">
-              <img src="/image5.png" alt="ERP Solutions" className="img-fluid img-blend" />
+              <img src="/image5.jpg" alt="ERP Solutions" className="img-fluid img-blend" />
               <h3 className="image-heading">ERP Solutions</h3>
             </div>
             <p>Custom modules, integrations, and support.</p>

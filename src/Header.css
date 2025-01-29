@@ -1,6 +1,6 @@
 /* Header styles */
 .custom-navbar {
-  background-color: #051622;
+  background-color: #000000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   padding: 1rem 0;
   transition: background-color 0.3s, box-shadow 0.3s;
@@ -103,3 +103,6 @@
 #blog-dropdown {
   color: white;
 }
+/* .company-logo {
+  transition: all 0.9s ease-out; 
+} */
