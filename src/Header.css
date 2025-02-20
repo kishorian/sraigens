@@ -14,8 +14,8 @@
 }
 
 .company-logo {
-  height: 100px; /* Updated from 50px to 100px */
-  width: 100px;
+  height: 90px; /* Updated from 50px to 100px */
+  width: 90px;
   border-radius: 10%;
   /* Optional: uncomment the next line to add margin if needed */
   /* margin-right: 1rem; */
@@ -103,6 +103,6 @@
 #blog-dropdown {
   color: white;
 }
-/* .company-logo {
+.company-logo {
   transition: all 0.9s ease-out; 
-} */
+}

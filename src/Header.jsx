@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import './Header.css'; // Import custom styles
+import './Header.css'; 
 
 const scrollVariants = {
   hidden: { opacity: 0, x: -50 },

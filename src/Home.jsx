@@ -95,7 +95,7 @@ const Home = () => {
             whileInView="visible"
             viewport={{ multiple: true }}
           >
-            <div className="image-container">
+            <div className="image-container" onClick={() => navigate('/services')} >
               <img src="/image3.jpg" alt="AI Solutions" className="img-fluid img-blend" />
               <h3 className="image-heading">AI Solutions</h3>
             </div>
@@ -110,7 +110,7 @@ const Home = () => {
             whileInView="visible"
             viewport={{ multiple: true }}
           >
-            <div className="image-container">
+            <div className="image-container" onClick={() => navigate('/services')}>
               <img src="/image4.jpg" alt="AI Automation" className="img-fluid img-blend" />
               <h3 className="image-heading">AI Automation</h3>
             </div>
@@ -125,7 +125,7 @@ const Home = () => {
             whileInView="visible"
             viewport={{ multiple: true }}
           >
-            <div className="image-container">
+            <div className="image-container" onClick={() => navigate('/services')}>
               <img src="/image5.jpg" alt="ERP Solutions" className="img-fluid img-blend" />
               <h3 className="image-heading">ERP Solutions</h3>
             </div>
